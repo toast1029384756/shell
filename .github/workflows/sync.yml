@@ -1,0 +1,30 @@
+name: Sync Fork with Upstream
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"  # Every 15 minutes
+  workflow_dispatch:        # Manual run button
+  push:                     # Optional: sync when you push
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/caelestia-dots/shell.git
+          git fetch upstream
+
+      - name: Merge upstream into fork
+        run: |
+          git checkout main
+          git merge upstream/main --allow-unrelated-histories || true
+
+      - name: Push changes back to fork
+        run: |
+          git push origin main
