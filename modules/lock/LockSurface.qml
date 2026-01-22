@@ -179,6 +179,7 @@ WlSessionLockSurface {
     Item {
         id: lockContent
 
+	visible: root.screen.name === "HDMI-A-1"
         readonly property int size: lockIcon.implicitHeight + Appearance.padding.large * 4
         readonly property int radius: size / 4 * Appearance.rounding.scale
 
