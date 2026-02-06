@@ -219,8 +219,6 @@ default, you must create it manually.
 ```json
 {
     "appearance": {
-        "mediaGifSpeedAdjustment": 300,
-        "sessionGifSpeed": 0.7,
         "anim": {
             "durations": {
                 "scale": 1
@@ -562,57 +560,7 @@ default, you must create it manually.
             "wallpapers": false
         },
         "showOnHover": false,
-        "favouriteApps": [],
-        "hiddenApps": [],
-        "categories": [
-            {
-                "name": "Development",
-                "icon": "code",
-                "apps": ["code-oss", "github-desktop"]
-            },
-            {
-                "name": "Graphics",
-                "icon": "palette",
-                "apps": ["org.inkscape.Inkscape", "gimp"]
-            },
-            {
-                "name": "Communication",
-                "icon": "chat",
-                "apps": ["vesktop", "discord"]
-            },
-            {
-                "name": "Media",
-                "icon": "play_circle",
-                "apps": ["spotify", "obs"]
-            },
-            {
-                "name": "Games",
-                "icon": "sports_esports",
-                "apps": ["steam"]
-            },
-            {
-                "name": "Utilities",
-                "icon": "build",
-                "apps": ["obs", "thunar"]
-            }
-        ],
-        "contextMenuMain": [
-            {"launch": {"text": "Launch", "icon": "play_arrow", "bold": true}},
-            {"terminal": {"parent": "launch"}},
-            "separator",
-            "favorites",
-            "hide",
-            "workspaces"
-        ],
-        "contextMenuAdvanced": [
-            "open-path",
-            "desktop-file",
-            "separator",
-            {"custom-submenu": {"text": "Advanced Options", "icon": "settings"}},
-            {"kill": {"parent": "custom-submenu"}},
-            {"separator": {"parent": "custom-submenu"}},
-            {"copy-exec": {"parent": "custom-submenu"}}
-        ]
+        "hiddenApps": []
     },
     "lock": {
         "recolourLogo": false
